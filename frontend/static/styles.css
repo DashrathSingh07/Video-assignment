@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.video-container {
+    grid-column: 1 / -1; /* Span all 8 columns */
+    width: 100%;
+    display: flex; /* To center the video if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+}
+
+.comments-section {
+    
+    margin-top: 15px;
+    overflow-y:scroll;
+    border: 2px;
+  border-radius: 5px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-time {
+    font-size: 0.9em;
+    color: gray;
+}

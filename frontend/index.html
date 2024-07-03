@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Collaboration Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body >
+    <div class="container-fluid jumbotron p-3 my-3  " style="background-color: rgb(0, 0, 0);">       
+
+        <div class="row">
+            <div class="col-md-8" style="background-color: rgb(14, 13, 30);" >
+                <h1 class="my-4 text-white">Video Collaboration Tool</h1>
+                <div class="video-container">
+                    <video id="videoPlayer" class="video-js vjs-default-skin rounded " controls preload="auto"
+                        width="100%">
+                        <source src="{{ url_for('static', filename='uploads/sample-video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="row center">
+                    <div class="input-group mt-3 col-md-10">
+                        <input type="text" id="commentInput" class="form-control" placeholder="Add a comment...">
+                    </div>
+                    <div class="input-group mt-3 col-md-2">
+                        <div class="input-group-append" style="width: 100%;">
+                            <button class="btn btn-success" id="addCommentButton">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="comments-section mt-4" style="background-color: rgb(24, 22, 51);">
+                    <h3 class="my-4 text-white">Comments</h3>
+                    <div id="commentsList" class="list-group">
+                        <!-- Comments will be dynamically inserted here -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='video.js') }}"></script>
+</body>
+
+</html>
