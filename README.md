@@ -43,3 +43,7 @@ A web-based tool for video collaboration, allowing users to watch uploaded video
 - Use Heroku or AWS for deploying the Flask backend.
 - Use GitHub for version control.
 
+## Screenshots
+- ![image](https://github.com/DashrathSingh07/Video-assignment/assets/118044162/756da08e-6f60-4a48-92b8-c2823ac463b0)
+
+
